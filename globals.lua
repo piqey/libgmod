@@ -11,7 +11,7 @@ end
 --- ⚠ **WARNING**: If the file trying to be added is empty, an error will occur, and the file will not be sent to the client.  
 --- ℹ **NOTE**: This function is not needed for scripts located in **lua/autorun/** and **lua/autorun/client/**: they are automatically sent to clients.  
 --- ℹ **NOTE**: You can add up to 8192 files.  
---- @param file string @The name/path to the Lua file that should be sent, relative to the garrysmod/lua folder
+--- @param file? string @The name/path to the Lua file that should be sent, relative to the garrysmod/lua folder
 function _G.AddCSLuaFile(file)
 end
 
