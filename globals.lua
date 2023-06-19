@@ -112,7 +112,7 @@ end
 --- @param r number @An integer from 0-255 describing the red value of the color.
 --- @param g number @An integer from 0-255 describing the green value of the color.
 --- @param b number @An integer from 0-255 describing the blue value of the color.
---- @param a number @An integer from 0-255 describing the alpha (transparency) of the color.
+--- @param a? number @An integer from 0-255 describing the alpha (transparency) of the color.
 --- @return table @The created Color.
 function _G.Color(r, g, b, a)
 end
@@ -920,7 +920,7 @@ end
 --- Either returns the material with the given name, or loads the material interpreting the first argument as the path.  
 --- ℹ **NOTE**: When using .png or .jpg textures, try to make their sizes Power Of 2 (1, 2, 4, 8, 16, 32, 64, etc). While images are no longer scaled to Power of 2 sizes since February 2019, it is a good practice for things like icons, etc.  
 --- @param materialName string @The material name or path
---- @param pngParameters string @A string containing space separated keywords which will be used to add material parameters
+--- @param pngParameters? string @A string containing space separated keywords which will be used to add material parameters
 --- @return GIMaterial @Generated material
 --- @return number @How long it took for the function to run
 function _G.Material(materialName, pngParameters)
@@ -1707,7 +1707,7 @@ end
 --- Attempts to convert the value to a number.  
 --- Returns nil on failure.  
 --- @param value any @The value to convert
---- @param base number @The  used in the string
+--- @param base? number @The  used in the string
 --- @return number @The numeric representation of the value with the given base, or nil if the conversion failed.
 function _G.tonumber(value, base)
 end
@@ -1727,8 +1727,8 @@ end
 
 --- This function takes a numeric indexed table and return all the members as a vararg. If specified, it will start at the given index and end at end index.  
 --- @param tbl table @The table to generate the vararg from.
---- @param startIndex number @Which index to start from
---- @param endIndex number @Which index to end at
+--- @param startIndex? number @Which index to start from
+--- @param endIndex? number @Which index to end at
 --- @return any @Output values
 function _G.unpack(tbl, startIndex, endIndex)
 end

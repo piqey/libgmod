@@ -192,7 +192,7 @@ end
 
 --- Removes leading and trailing matches of a string.  
 --- @param Inputstring string @The string to trim.
---- @param Char string @String to match.
+--- @param Char? string @String to match.
 --- @return string @Modified string
 function string.Trim(Inputstring, Char)
 end
@@ -236,8 +236,8 @@ end
 --- Attempts to find the specified substring in a string, uses Patterns by default.  
 --- @param haystack string @The string to search in.
 --- @param needle string @The string to find, can contain patterns if enabled.
---- @param startPos number @The position to start the search from, can be negative start position will be relative to the end position.
---- @param noPatterns boolean @Disable patterns.
+--- @param startPos? number @The position to start the search from, can be negative start position will be relative to the end position.
+--- @param noPatterns? boolean @Disable patterns.
 --- @return number @Starting position of the found text, or nil if the text wasn't found
 --- @return number @Ending position of found text, or nil if the text wasn't found
 --- @return string @Matched text for each group if patterns are enabled and used, or nil if the text wasn't found
@@ -313,7 +313,7 @@ end
 --- Returns a sub-string, starting from the character at position `StartPos` of the string (inclusive), and optionally ending at the character at position `EndPos` of the string (also inclusive). If EndPos is not given, the rest of the string is returned.  
 --- @param string string @The string you'll take a sub-string out of.
 --- @param StartPos number @The position of the first character that will be included in the sub-string.
---- @param EndPos number @The position of the last character to be included in the sub-string
+--- @param EndPos? number @The position of the last character to be included in the sub-string
 --- @return string @The substring.
 function string.sub(string, StartPos, EndPos)
 end

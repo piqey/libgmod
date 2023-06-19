@@ -203,7 +203,7 @@ end
 --- @param r number @The red value of color, or a Color.
 --- @param g number @The green value of color
 --- @param b number @The blue value of color
---- @param a number @The alpha value of color
+--- @param a? number @The alpha value of color
 function surface.SetDrawColor(r, g, b, a)
 end
 

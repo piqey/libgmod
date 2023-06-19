@@ -213,10 +213,10 @@ end
 --- ⚠ **WARNING**: Do not use this for looping sounds with a filepath: see Entity:StopSound for more details.  
 --- 🦟 **BUG**: [This does not respond to Global.SuppressHostEvents.](https://github.com/Facepunch/garrysmod-issues/issues/2651)  
 --- @param soundName string @The name of the sound to be played
---- @param soundLevel number @A modifier for the distance this sound will reach, acceptable range is 0 to 511
---- @param pitchPercent number @The pitch applied to the sound
---- @param volume number @The volume, from 0 to 1.
---- @param channel number @The sound channel, see Enums/CHAN
+--- @param soundLevel? number @A modifier for the distance this sound will reach, acceptable range is 0 to 511
+--- @param pitchPercent? number @The pitch applied to the sound
+--- @param volume? number @The volume, from 0 to 1.
+--- @param channel? number @The sound channel, see Enums/CHAN
 function GEntity:EmitSound(soundName, soundLevel, pitchPercent, volume, channel)
 end
 

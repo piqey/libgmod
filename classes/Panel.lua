@@ -34,7 +34,7 @@ end
 --- Uses animation to transition the current alpha value of a panel to a new alpha, over a set period of time and after a specified delay.  
 --- @param alpha number @The alpha value (0-255) to approach.
 --- @param duration number @The time in seconds it should take to reach the alpha.
---- @param delay number @The delay before the animation starts.
+--- @param delay? number @The delay before the animation starts.
 --- @param callback function @The function to be called once the animation finishes
 function GPanel:AlphaTo(alpha, duration, delay, callback)
 end
@@ -308,7 +308,7 @@ function GPanel:GetChildPosition(pnl)
 end
 
 --- Returns a table with all the child panels of the panel.  
---- @return table @children
+--- @return GPanel[] @children
 function GPanel:GetChildren()
 end
 
@@ -317,7 +317,7 @@ end
 --- @param y number @The vertical (y) position of the top-left corner of the rectangle, relative to the panel object.
 --- @param w number @The width of the rectangle.
 --- @param h number @The height of the rectangle.
---- @return table @A table of panel objects that lie at least partially within the specified rectangle.
+--- @return GPanel[] @A table of panel objects that lie at least partially within the specified rectangle.
 function GPanel:GetChildrenInRect(x, y, w, h)
 end
 
@@ -587,14 +587,14 @@ function GPanel:InsertFade(sustain, length)
 end
 
 --- Invalidates the layout of this panel object and all its children. This will cause these objects to re-layout immediately, calling PANEL:PerformLayout. If you want to perform the layout in the next frame, you will have loop manually through all children, and call Panel:InvalidateLayout on each.  
---- @param recursive boolean @If `true`, the method will recursively invalidate the layout of all children
+--- @param recursive? boolean @If `true`, the method will recursively invalidate the layout of all children
 function GPanel:InvalidateChildren(recursive)
 end
 
 --- Causes the panel to re-layout in the next frame. During the layout process  PANEL:PerformLayout will be called on the target panel.  
 --- You should avoid calling this function every frame.  
 --- 🦟 **BUG**: [Using this on a panel after clicking on a docked element will cause docked elements to reorient themselves incorrectly. This can be fixed by assigning a unique Panel:SetZPos to each docked element.](https://github.com/Facepunch/garrysmod-issues/issues/2574)  
---- @param layoutNow boolean @If true the panel will re-layout instantly and not wait for the next frame.
+--- @param layoutNow? boolean @If true the panel will re-layout instantly and not wait for the next frame.
 function GPanel:InvalidateLayout(layoutNow)
 end
 

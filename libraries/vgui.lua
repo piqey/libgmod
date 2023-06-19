@@ -4,8 +4,8 @@ _G.vgui = {}
 --- Creates a panel by the specified classname.  
 --- ℹ **NOTE**: Custom VGUI elements are not loaded instantly. Use GM:OnGamemodeLoaded to create them on startup.  
 --- @param classname string @Classname of the panel to create
---- @param parent GPanel @Parent of the created panel.
---- @param name string @Name of the created panel.
+--- @param parent? GPanel @Parent of the created panel.
+--- @param name? string @Name of the created panel.
 --- @return GPanel @panel
 function vgui.Create(classname, parent, name)
 end

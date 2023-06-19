@@ -242,8 +242,8 @@ end
 --- Concatenates the contents of a table to a string.  
 --- @param tbl table @The table to concatenate.
 --- @param concatenator string @A seperator to insert between strings
---- @param startPos number @The key to start at
---- @param endPos number @The key to end at
+--- @param startPos? number @The key to start at
+--- @param endPos? number @The key to end at
 --- @return string @Concatenated values
 function table.concat(tbl, concatenator, startPos, endPos)
 end
