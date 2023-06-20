@@ -127,12 +127,12 @@ function net.Receive(messageName, callback)
 end
 
 --- Sends the current message to the specified player, or to all players listed in the table.  
---- @param ply GPlayer @The player(s) to send the message to
+--- @param ply GPlayer | GPlayer[] @The player(s) to send the message to
 function net.Send(ply)
 end
 
 --- Sends the current message to all except the specified, or to all except all players in the table.  
---- @param ply GPlayer @The player(s) to NOT send the message to
+--- @param ply GPlayer | GPlayer[] @The player(s) to NOT send the message to
 function net.SendOmit(ply)
 end
 
