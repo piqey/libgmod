@@ -185,7 +185,7 @@ end
 --- 🦟 **BUG**: [FCVAR_ARCHIVE causes default value replication issues on clientside FCVAR_REPLICATED convars and should be omitted clientside as a workaround](https://github.com/Facepunch/garrysmod-issues/issues/3323)  
 --- @param name string @Name of the ConVar
 --- @param value number | string @Default value of the convar
---- @param flags number | number[] @Flags of the convar, see Enums/FCVAR, either as bitflag or as table.
+--- @param flags? number | number[] @Flags of the convar, see Enums/FCVAR, either as bitflag or as table.
 --- @param helptext? string @The help text to show in the console.
 --- @param min? number @If set, the ConVar cannot be changed to a number lower than this value.
 --- @param max? number @If set, the ConVar cannot be changed to a number higher than this value.
