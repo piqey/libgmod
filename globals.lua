@@ -171,12 +171,12 @@ end
 --- ℹ **NOTE**: This function is a wrapper of Global.CreateConVar, with the difference being that FCVAR_ARCHIVE and FCVAR_USERINFO are added automatically when **shouldsave** and **userinfo** are true, respectively.  
 --- Although this function is shared, it should only be used clientside.  
 --- @param name string @Name of the ConVar to be created and able to be accessed
---- @param default string @Default value of the ConVar.
---- @param shouldsave boolean @Should the ConVar be saved across sessions
---- @param userinfo boolean @Should the ConVar and its containing data be sent to the server when it has changed
---- @param helptext string @Help text to display in the console.
---- @param min number @If set, the convar cannot be changed to a number lower than this value.
---- @param max number @If set, the convar cannot be changed to a number higher than this value.
+--- @param default number | string @Default value of the ConVar.
+--- @param shouldsave? boolean @Should the ConVar be saved across sessions
+--- @param userinfo? boolean @Should the ConVar and its containing data be sent to the server when it has changed
+--- @param helptext? string @Help text to display in the console.
+--- @param min? number @If set, the convar cannot be changed to a number lower than this value.
+--- @param max? number @If set, the convar cannot be changed to a number higher than this value.
 --- @return GConVar @Created convar.
 function _G.CreateClientConVar(name, default, shouldsave, userinfo, helptext, min, max)
 end
@@ -184,11 +184,11 @@ end
 --- Creates a console variable (ConVar), in general these are for things like gamemode/server settings.  
 --- 🦟 **BUG**: [FCVAR_ARCHIVE causes default value replication issues on clientside FCVAR_REPLICATED convars and should be omitted clientside as a workaround](https://github.com/Facepunch/garrysmod-issues/issues/3323)  
 --- @param name string @Name of the ConVar
---- @param value string @Default value of the convar
---- @param flags number @Flags of the convar, see Enums/FCVAR, either as bitflag or as table.
---- @param helptext string @The help text to show in the console.
---- @param min number @If set, the ConVar cannot be changed to a number lower than this value.
---- @param max number @If set, the ConVar cannot be changed to a number higher than this value.
+--- @param value number | string @Default value of the convar
+--- @param flags number | number[] @Flags of the convar, see Enums/FCVAR, either as bitflag or as table.
+--- @param helptext? string @The help text to show in the console.
+--- @param min? number @If set, the ConVar cannot be changed to a number lower than this value.
+--- @param max? number @If set, the ConVar cannot be changed to a number higher than this value.
 --- @return GConVar @The convar created.
 function _G.CreateConVar(name, value, flags, helptext, min, max)
 end
