@@ -291,7 +291,7 @@ end
 --- Finds a Pattern in a string.  
 --- @param string string @String which should be searched in for matches.
 --- @param pattern string @The pattern that defines what should be matched.
---- @param startPosition number @The start index to start the matching from, can be negative to start the match from a position relative to the end.
+--- @param startPosition? number @The start index to start the matching from, can be negative to start the match from a position relative to the end.
 --- @return any @Matched text(s)
 function string.match(string, pattern, startPosition)
 end
