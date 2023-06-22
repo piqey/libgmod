@@ -277,6 +277,7 @@ end
 --- @param m number @If m is the only parameter: upper limit
 --- @param n number @Upper limit
 --- @return number @Random value
+--- @overload fun(max: number): number
 function math.random(m, n)
 end
 

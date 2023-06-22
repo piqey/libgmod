@@ -1,3 +1,7 @@
+_G.SERVER = nil --- @type boolean
+_G.CLIENT = nil --- @type boolean
+_G.MENU = nil --- @type boolean
+
 --- Adds simple Get/Set accessor functions on the specified table.  
 --- Can also force the value to be set to a number, bool or string.  
 --- @param tab table @The table to add the accessor functions too.

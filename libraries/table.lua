@@ -276,6 +276,7 @@ end
 --- @param position number @The position in the table to insert the variable
 --- @param value any @The variable to insert into the table.
 --- @return number @The index the object was placed at.
+--- @overload fun(tbl: table, value: any): any
 function table.insert(tbl, position, value)
 end
 

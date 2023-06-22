@@ -270,7 +270,7 @@ end
 --- @param string string @String which should be modified.
 --- @param pattern string @The pattern that defines what should be matched and eventually be replaced.
 --- @param replacement string @In case of a string the matches sequence will be replaced with it
---- @param maxReplaces number @Maximum number of replacements to be made.
+--- @param maxReplaces? number @Maximum number of replacements to be made.
 --- @return string @replaceResult
 --- @return number @replaceCount
 function string.gsub(string, pattern, replacement, maxReplaces)
