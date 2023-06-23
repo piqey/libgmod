@@ -1533,7 +1533,7 @@ end
 --- ℹ **NOTE**: This function will try to load local client file if `sv_allowcslua` is **1**  
 --- 🦟 **BUG**: [Global.pcalling this function will break autorefresh.](https://github.com/Facepunch/garrysmod-issues/issues/1976)  
 --- @param fileName string @The name of the script to be executed
---- @return any @Anything that the executed Lua script returns.
+--- @return any ... @Anything that the executed Lua script returns.
 function _G.include(fileName)
 end
 
