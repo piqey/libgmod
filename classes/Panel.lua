@@ -3,6 +3,7 @@ local GPanel = {}
 --- Adds the specified object to the panel.  
 --- @param object GPanel @The panel to be added (parented)
 --- @return GPanel @New panel
+--- @overload fun(class: string): GPanel
 function GPanel:Add(object)
 end
 

@@ -38,7 +38,7 @@ end
 --- This is the reverse of string.Implode.  
 --- @param separator string @The string will be separated wherever this sequence is found.
 --- @param str string @The string to split up.
---- @param use_patterns boolean @Set this to true if your separator is a pattern.
+--- @param use_patterns? boolean @Set this to true if your separator is a pattern.
 --- @return table @Exploded string as a numerical sequential table.
 function string.Explode(separator, str, use_patterns)
 end

@@ -297,7 +297,7 @@ function _G.DeriveGamemode(base)
 end
 
 --- Creates a DMenu and closes any current menus.  
---- @param parent GPanel @The panel to parent the created menu to.
+--- @param parent? GPanel @The panel to parent the created menu to.
 --- @return GPanel @The created DMenu
 function _G.DermaMenu(parent)
 end
@@ -673,7 +673,7 @@ end
 --- @param name string @The internal name of the render target.
 --- @param width number @The width of the render target, must be power of 2
 --- @param height number @The height of the render target, must be power of 2
---- @param additive boolean @Sets whenever the rt should be additive.
+--- @param additive? boolean @Sets whenever the rt should be additive.
 --- @return GITexture @The render target
 function _G.GetRenderTarget(name, width, height, additive)
 end
@@ -1096,7 +1096,7 @@ end
 
 --- Returns an iterator function that can be used to loop through a table in random order  
 --- @param table table @Table to create iterator for
---- @param descending boolean @Whether the iterator should iterate descending or not
+--- @param descending? boolean @Whether the iterator should iterate descending or not
 --- @return function @Iterator function
 function _G.RandomPairs(table, descending)
 end

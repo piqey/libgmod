@@ -39,8 +39,8 @@ end
 --- @param g number @Green component to clear to.
 --- @param b number @Blue component to clear to.
 --- @param a number @Alpha component to clear to.
---- @param clearDepth boolean @Clear the depth.
---- @param clearStencil boolean @Clear the stencil.
+--- @param clearDepth? boolean @Clear the depth.
+--- @param clearStencil? boolean @Clear the stencil.
 function render.Clear(r, g, b, a, clearDepth, clearStencil)
 end
 
@@ -451,7 +451,7 @@ end
 --- See also render.OverrideBlend.  
 --- ℹ **NOTE**: Doing surface draw calls with alpha set to 0 is a no-op and will never have any effect.  
 --- @param enable boolean @Enable or disable the override.
---- @param shouldWrite boolean @If the previous argument is true, sets whether the next rendering operations should write to the alpha channel or not
+--- @param shouldWrite? boolean @If the previous argument is true, sets whether the next rendering operations should write to the alpha channel or not
 function render.OverrideAlphaWriteEnable(enable, shouldWrite)
 end
 
@@ -462,9 +462,10 @@ end
 --- @param srcBlend number @The source color blend function Enums/BLEND
 --- @param destBlend number @The destination color blend function Enums/BLEND.
 --- @param blendFunc number @The blend mode used for drawing the color layer Enums/BLENDFUNC.
---- @param srcBlendAlpha number @The source alpha blend function Enums/BLEND
---- @param destBlendAlpha number @The destination alpha blend function Enums/BLEND.
---- @param blendFuncAlpha number @The blend mode used for drawing the alpha layer Enums/BLENDFUNC.
+--- @param srcBlendAlpha? number @The source alpha blend function Enums/BLEND
+--- @param destBlendAlpha? number @The destination alpha blend function Enums/BLEND.
+--- @param blendFuncAlpha? number @The blend mode used for drawing the alpha layer Enums/BLENDFUNC.
+--- @overload fun(boolean)
 function render.OverrideBlend(enabled, srcBlend, destBlend, blendFunc, srcBlendAlpha, destBlendAlpha, blendFuncAlpha)
 end
 
@@ -547,10 +548,10 @@ end
 --- ℹ **NOTE**: If you want to render to the render target in 2d mode and it is not the same size as the screen, use cam.Start2D and cam.End2D.  
 --- ℹ **NOTE**: If the render target is bigger than the screen, rendering done with the surface library will be clipped to the screen bounds unless you call Global.DisableClipping  
 --- @param texture GITexture @The new render target to be used.
---- @param x number @X origin of the viewport.
---- @param y number @Y origin of the viewport.
---- @param w number @Width of the viewport.
---- @param h number @Height of the viewport
+--- @param x? number @X origin of the viewport.
+--- @param y? number @Y origin of the viewport.
+--- @param w? number @Width of the viewport.
+--- @param h? number @Height of the viewport
 function render.PushRenderTarget(texture, x, y, w, h)
 end
 
