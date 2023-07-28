@@ -45,8 +45,8 @@ end
 
 --- Returns the time as a formatted string or as a table if no format is given.  
 --- @param float number @The time in seconds to format.
---- @param format string @An optional formatting to use
---- @return string @Returns the time as a formatted string only if a format was specified
+--- @param format? string @An optional formatting to use
+--- @return string | table<string, number> @Returns the time as a formatted string only if a format was specified
 function string.FormattedTime(float, format)
 end
 
