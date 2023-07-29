@@ -51,7 +51,7 @@ end
 --- Pushes the specified matrix onto the render matrix stack. Unlike opengl, this will replace the current model matrix.  
 --- ℹ **NOTE**: This does not work with cam.Start3D2D if `multiply` is false.  
 --- @param matrix GVMatrix @The matrix to push.
---- @param multiply boolean @If set, multiplies given matrix with currently active matrix (cam.GetModelMatrix) before pushing.
+--- @param multiply? boolean @If set, multiplies given matrix with currently active matrix (cam.GetModelMatrix) before pushing.
 function cam.PushModelMatrix(matrix, multiply)
 end
 
