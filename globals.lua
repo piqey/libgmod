@@ -1462,7 +1462,7 @@ end
 --- Creates a Vector object.  
 --- @param x number @The x component of the vector
 --- @param y number @The y component of the vector.
---- @param z number @The z component of the vector.
+--- @param z? number @The z component of the vector.
 --- @return GVector @The created vector object.
 function _G.Vector(x, y, z)
 end
