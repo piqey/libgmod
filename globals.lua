@@ -931,7 +931,7 @@ function _G.Material(materialName, pngParameters)
 end
 
 --- Returns a VMatrix object.  
---- @param data table @Initial data to initialize the matrix with
+--- @param data? table @Initial data to initialize the matrix with
 --- @return GVMatrix @New matrix.
 function _G.Matrix(data)
 end
