@@ -105,7 +105,7 @@ end
 
 --- Rounds the given value to the nearest whole number or to the given decimal places.  
 --- @param value number @The value to round.
---- @param decimals number @The decimal places to round to.
+--- @param decimals? number @The decimal places to round to.
 --- @return number @The rounded value.
 function math.Round(value, decimals)
 end
