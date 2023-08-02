@@ -715,10 +715,28 @@ end
 function _G.HSVToColor(hue, saturation, value)
 end
 
+---@class HTTPRequest
+---@field failed fun(reason: string) Function to be called on failure
+---@field success fun(code: number, body: string, headers: table) Function to be called on success
+---@field method | # Request method, case insensitive
+---| `"GET"`
+---| `"POST"`
+---| `"HEAD"`
+---| `"PUT"`
+---| `"DELETE"`
+---| `"PATCH"`
+---| `"OPTIONS"`
+---@field url string The target URL
+---@field parameters table? KeyValue table for parameters. This is only applicable to `"GET"`, `"POST"` and `"HEAD"`
+---@field headers table KeyValue table for headers
+---@field body string? Body `string` for `"POST"` data. If set, will override parameters
+---@field type string? Content type for body
+---@field timeout number? The timeout for the connection
+
 --- Launches an asynchronous http request with the given parameters.  
 --- 🦟 **BUG**: [This cannot send or receive multiple headers with the same name.](https://github.com/Facepunch/garrysmod-issues/issues/2232)  
 --- ℹ **NOTE**: HTTP-requests on private networks don't work. To enable HTTP-requests on private networks use Command Line Parameters `-allowlocalhttp`  
---- @param parameters table @The request parameters
+--- @param parameters HTTPRequest @The request parameters
 --- @return boolean @true if we made a request, nil if we failed.
 function _G.HTTP(parameters)
 end
