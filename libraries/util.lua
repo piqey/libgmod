@@ -486,7 +486,7 @@ end
 --- ⚠ **WARNING**: All keys are strings in the JSON format, so all keys will be converted to strings!  
 --- 🦟 **BUG**: [This will produce invalid JSON if the provided table contains nan or inf values.](https://github.com/Facepunch/garrysmod-issues/issues/3561)  
 --- @param table table @Table to convert.
---- @param prettyPrint boolean @Format and indent the JSON.
+--- @param prettyPrint? boolean @Format and indent the JSON.
 --- @return string @A JSON formatted string containing the serialized data
 function util.TableToJSON(table, prettyPrint)
 end
