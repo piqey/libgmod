@@ -77,7 +77,7 @@ end
 --- @param name string @The name of the decal to paint.
 --- @param start GVector @The start of the trace.
 --- @param end_ GVector @The end of the trace.
---- @param filter GEntity @If set, the decal will not be able to be placed on given entity
+--- @param filter? GEntity @If set, the decal will not be able to be placed on given entity
 function util.Decal(name, start, end_, filter)
 end
 
