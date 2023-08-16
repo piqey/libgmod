@@ -129,7 +129,7 @@ function _G.ColorAlpha(color, alpha)
 end
 
 --- Creates a Color with randomized red, green, and blue components. If the alpha argument is true, alpha will also be randomized.  
---- @param a boolean @Should alpha be randomized.
+--- @param a? boolean @Should alpha be randomized.
 --- @return table @The created Color.
 function _G.ColorRand(a)
 end
